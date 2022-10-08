@@ -1,0 +1,8 @@
+<h1>Home#index</h1>
+<% if current_user %>
+ <h1> Hello <%="#{current_user.email}" %></he> 
+ <%= button_to 'Delete', destroy_user_session_path, method: :delete %>
+ <%else%>
+<%= link_to 'Sign In', new_user_session_path %>
+<% end %>
+
