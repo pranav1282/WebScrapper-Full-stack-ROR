@@ -72,3 +72,5 @@ group :test do
 end
 gem "devise"
 gem "pry-byebug"
+gem 'rails-erd', group: :development
+gem 'nokogiri'
