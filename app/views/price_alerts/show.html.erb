@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @price_alert %>
+
+<div>
+  <%= link_to "Edit this price alert", edit_price_alert_path(@price_alert) %> |
+  <%= link_to "Back to price alerts", price_alerts_path %>
+
+  <%= button_to "Destroy this price alert", @price_alert, method: :delete %>
+</div>
