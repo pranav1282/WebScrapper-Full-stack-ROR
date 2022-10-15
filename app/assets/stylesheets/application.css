@@ -26,7 +26,7 @@ body{
     max-width: 800px;
     max-height: 500px;
     margin: auto;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
@@ -135,4 +135,11 @@ body{
 }
 .butt_out:focus{
     outline: none;
+}
+td {
+  white-space: normal !important; 
+  word-wrap: break-word;  
+}
+table {
+  table-layout: fixed;
 }

@@ -21,7 +21,6 @@ class PriceAlertsController < ApplicationController
 
   # POST /price_alerts or /price_alerts.json
   def create
-    binding.pry
     @price_alert = current_user.price_alerts.new(price_alert_params)
 
     respond_to do |format|
