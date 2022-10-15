@@ -1,29 +1,51 @@
-<h2>Sign up</h2>
+<div class="container">
+  <div class="myCard">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="myLeftCtn">
+            <header>Create new account</header>
+            <%= form_for(resource, as: resource_name, url: registration_path(resource_name, html: {class: "myForm text-center"})) do |f| %>
+            <%= render "devise/shared/error_messages", resource: resource %>
+            <div class="form-group">
+              <i class="fas fa-envelope"></i>
+              <!-- <%= f.label :email %><br /> -->
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"Email", class:"myInput" %>
+            </div>
+            <br>
+            <div class="form-group">
+              <i class="fas fa-lock"></i>
+              <% if @minimum_password_length %>
+              <% end %>
+              <%= f.password_field :password, autocomplete: "new-password", placeholder:"Password" , class:"myInput"%>
+            </div>
+            <br>
+            <div class="form-group">
+              <i class="fas fa-lock"></i>
+              <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder:"Re-enter password", class:"myInput" %>
+            </div>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+            <br>
+            <div>
+              <%= f.submit "Sign up", class:"butt" %>
+            </div>
+            
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+            <%= render "devise/shared/links" %>  
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="myRightCtn">
+          <div class="box">
+            <header>Welcome Back!</header>
+            <p>To keep connected with us please login with your  personal info</p>
+            <div>
+              <%= f.submit "Log in", class:"butt_out" %>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      </div>    
+    </div>
   </div>
+</div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
