@@ -1,15 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Scrapper</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+      <title>Web Scrapper</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <%= csrf_meta_tags %>
+      <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+      <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+      <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Nunito:400,600,700,800,900&display=swap", "data-turbo-track": "reload" %>
+      <%= stylesheet_link_tag "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", "data-turbo-track": "reload" %>
   </head>
 
   <body>
+    <div class="header">
+      <div class="navbar">
+        <div class="logo">
+          <%= link_to 'Web', root_path , class: "logo"%>
+          <%= link_to 'Scrapper', root_path , class: "logo2"%>
+        </div>
+
+        <div class="menu">
+          <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Mission</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+          <% if current_user %>
+            <%= button_to 'Log out', destroy_user_session_path, method: :delete, class: "login-btn", :style => 'border: none' %>
+          <% else %>
+            <div class="login-btn">
+              <%= link_to 'Log In', new_user_session_path %>
+              <% end %>
+            </div>
+      </div>
+     </div> 
+     <br><br><br><br>
      <%= yield %>
+
   </body>
 </html>
