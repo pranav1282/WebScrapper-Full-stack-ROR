@@ -75,6 +75,6 @@ gem "pry-byebug"
 gem 'rails-erd', group: :development
 gem 'nokogiri'  
 gem 'whenever', require: false
-
+gem "jquery-rails"
 
 

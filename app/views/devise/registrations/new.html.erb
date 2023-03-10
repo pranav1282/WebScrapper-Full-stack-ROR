@@ -1,29 +1,41 @@
-<h2>Sign up</h2>
+<div class="container">
+  <div class="card">
+    <div class="row">
+      <div class="col-md-6 left">
+        <header>Create new account</header>
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name, html: {class: "myForm text-center"})) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+          <div class="form-floating mb-3">
+            <%= f.email_field :email,  placeholder:"abc@gmail.com", class:"form-control", id:"floatingInput" %> 
+            <label for="floatingInput"> <i class="fas fa-envelope"></i> Email address</label>
+          </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+          <div class="form-floating mb-3">
+            <% if @minimum_password_length %>
+            <% end %>
+            <%= f.password_field :password, autocomplete: "new-password", placeholder:"Password" , class:"form-control"%>
+            <label for="floatingInput"> <i class="fas fa-lock"></i> Password</label>
+          </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
+          <div class="form-floating mb-3">
+            <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder:"Re-enter password", class:"form-control" %>
+            <label for="floatingInput"> <i class="fas fa-lock"></i> Re-enter Password</label>
+          </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+          <div>
+            <%= f.submit "Sign up", class:"butt" %>
+          </div>
+        <%end%>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+      </div>
 
-<%= render "devise/shared/links" %>
+      <div class="col-md-6 right">  
+        <div class="box">
+          <header>Welcome Back!</header>
+          <p>To keep connected with us please login with your  personal info</p>
+          <div>
+            <button>Log</button>
+          </div>
+        </div>
+      </div>     

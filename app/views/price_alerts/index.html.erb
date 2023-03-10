@@ -1,13 +1,8 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Price alerts</h1>
-
 <div id="price_alerts">
   <% @price_alerts.each do |price_alert| %>
     <%= render price_alert %>
-    <p>
-      <%= link_to "Show this price alert", price_alert %>
-    </p>
   <% end %>
 </div>
 

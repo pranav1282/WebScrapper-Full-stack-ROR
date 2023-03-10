@@ -1,4 +1,4 @@
-<div id="<%= dom_id price_alert %>">
+<!-- <div id="<%= dom_id price_alert %>">
   <p>
     <strong>Url:</strong>
     <%= price_alert.url %>
@@ -15,3 +15,23 @@
   </p>
 
 </div>
+ -->
+
+ <table class="table table-sm table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+     <!--  <th scope="col">URL</th>
+      <th scope="col">Selector</th> -->
+      <th scope="col">Trigger amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><img class="" src="https://rukminim1.flixcart.com/image/416/416/l37mtu80/washing-machine-new/m/d/s/-original-imagedm8qgrzh6fb.jpeg?q=70" width="30"> <%= link_to "Name", price_alert %></th>
+<!--       <td><%= price_alert.url %></td>
+      <td><%= price_alert.selector %></td> -->
+      <td><%= price_alert.trigger_amount %></td>
+    </tr>
+   </tbody>
+</table>
