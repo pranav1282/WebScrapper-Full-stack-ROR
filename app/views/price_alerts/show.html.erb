@@ -1,4 +1,97 @@
-<p style="color: green"><%= notice %></p>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+
+      <%= stylesheet_link_tag "loginPage", "data-turbo-track": "reload" %> 
+
+</head>
+<body>
+    <p style="color: green"><%= notice %></p>
+    <section class="vh-100">
+      <div class="container-fluid h-custom">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-md-7 col-lg-4 col-xl-3">
+            <img src="<%= @price_alert.image %>" class="img-fluid" alt="Sample image" width = "300rem">
+              <div class="text-center text-lg-start mt-4 pt-2">
+                <%= link_to "Edit", edit_price_alert_path(@price_alert), class: "btn btn-warning btn-lg  ", style: "padding-left: 2.5rem; padding-right: 2.5rem; margin-bottom: 1rem"  %>
+
+                <%= button_to "Destroy", @price_alert, method: :delete, class: "btn btn-danger btn-lg", style: "padding-left: 2.5rem; padding-right: 2.5rem; margin-bottom: 1rem" %>
+
+                
+
+                <%= link_to "Back to price alerts", price_alerts_path, style: "font-size: 1.5rem ;text-decoration:underline; color:black" %>
+
+              </div>
+
+          </div>
+          <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+
+              <div class="divider d-flex align-items-center my-4">
+                <p class="text-center fw-bold mx-3 mb-0">Details</p>
+              </div>
+
+              <!-- Email input -->
+
+              <div class="form-outline mb-4">
+                <!-- <label>URL</label> -->
+                <label class="mb-1"><h4 class="mb-0 text-sm">URL</h4></label>
+                <input type="text" name="" value="<%= @price_alert.url %>", class="form-control form-control-lg mb-4">  
+              </div>
+              <br>
+              <div class="form-outline mb-4">
+                <label class="mb-1"><h4 class="mb-0 text-sm">Price selector</h4></label>
+                <input type="text" name="" value="<%= @price_alert.selector %>", class="form-control form-control-lg">  
+
+                
+              </div>
+              <br>
+              <div class="form-outline mb-4">
+              <label class="mb-1"><h4 class="mb-0 text-sm">Trigger amount</h4></label>
+              <input type="text" name="" value="<%= @price_alert.trigger_amount %>", class="form-control form-control-lg">  
+
+                
+              </div>
+              <br>
+              <div class="form-outline mb-4">
+              <label class="mb-1"><h4 class="mb-0 text-sm">Title</h4></label>
+              <input type="text" name="" value="<%= @price_alert.title %>", class="form-control form-control-lg">  
+
+              </div>
+              <br>
+              <div class="form-outline mb-4">
+              <label class="mb-1"><h4 class="mb-0 text-sm">Description selector</h4></label>
+              <input type="text" name="" value="<%= @price_alert.descriptionselector %>", class="form-control form-control-lg">  
+
+                
+              </div>             
+
+              
+
+              <div class="text-center text-lg-start mt-4 pt-2">
+
+              </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<!-- <p style="color: green"><%= notice %></p>
 
 <table class="table table-sm table-dark">
   <thead>
@@ -15,6 +108,7 @@
       <td><%= @price_alert.url %></td>
       <td><%= @price_alert.selector %></td>
       <td><%= @price_alert.trigger_amount %></td>
+      <td><%= @price_alert.title %></td>
     </tr>
    </tbody>
 </table>
@@ -24,4 +118,4 @@
   <%= link_to "Back to price alerts", price_alerts_path %>
 
   <%= button_to "Destroy this price alert", @price_alert, method: :delete %>
-</div>
+</div> -->

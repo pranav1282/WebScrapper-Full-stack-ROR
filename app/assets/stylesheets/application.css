@@ -1,26 +1,7 @@
-<<<<<<< HEAD
-=======
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
->>>>>>> 5576062fa92e7b89c6624b05da2fa67c5abbd126
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-<<<<<<< HEAD
     font-family: 'Nunito', sans-serif;
 }
 
@@ -34,22 +15,22 @@ ul{
 
 .header{
     width: 100%;
-    height: 60vh;
+/*    height: 60vh;*/
     background-color: #fff;
     position: relative;
 }
 
 .header .navbar{
     width: 100%;
-    height: 80px;
+    height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    margin-top: 30px;
+    margin-top: 0.30rem;
 }
 .header .navbar li{
-    font-size: 28px;
+    font-size: 24px;
 }
 
 .logo img{
@@ -58,17 +39,17 @@ ul{
 
 .logo{
     color: #ffa037;
-    margin-left: 100px;
+    margin-left: 4rem;
     font-weight: bold;
     font-family: 'Nunito', sans-serif;
-    font-size: 55px;
+    font-size: 40px;
     display: inline-flex;
 }
 .logo2{
     color: black;
     font-weight: bold;
     font-family: 'Nunito', sans-serif;
-    font-size: 55px;
+    font-size: 40px;
     display: inline-flex;
 }
 
@@ -84,21 +65,22 @@ ul{
 
 .login-btn{
     display: block;
-    font-size: 28px;
+    font-size: 22px;
     font-weight: 700;
     cursor: pointer;
     border-radius: 30px;
     background-color: #f3ef51;
     padding: 8px 40px;
     margin-right: 100px;
+    border: none;
 }
 
 .banner{
     width: 80%;
-    height: 70%;
+/*    height: 7;*/
     position: absolute;
-    top: 25%;
-    left: 300px;
+    top: 9rem;
+    left: 9rem;
     color: #fff;
 }
 
@@ -106,11 +88,17 @@ ul{
     width: 50%;
     float: left;
     padding-left: 50px;
+    height: 30vh;
+}
+
+.app-picture img{
+    width: 32rem;
+    margin-left: 6rem;
 }
 
 .app-text h3{
-    margin-top: 100px;
-    font-size: 25px;
+    margin-top: 10vh;
+    font-size: 1.3rem;
     color: #000;
     font-weight: 400;
     letter-spacing: 2px;
@@ -118,7 +106,7 @@ ul{
 }
 
 .app-text h1{
-    font-size: 55px;
+    font-size: 2.5rem;
     position: relative;
     color: #000;
     margin-top: 30px;
@@ -127,7 +115,7 @@ ul{
 }
 
 .app-text p{
-    font-size: 27px;
+    font-size: 1.1rem;
     margin: 30px 30px 30px 0;
     letter-spacing: 1px;
     color: #000;
@@ -145,11 +133,11 @@ ul{
     display: block;
     color: #000;
     text-align: center;
-    font-size: 25px;
+    font-size: 1.1rem;
     font-weight: 700;
     border-radius: 32px;
     background-color: #ffa037;
-    padding: 15px 50px;
+    padding: 18px 60px;
 }
 
 .btn-group .play-btn{
@@ -175,7 +163,12 @@ ul{
 
 .play-btn-inner i{
     padding: 15px 19px;
-    font-size: 16px;
+    cursor: pointer;
+}
+
+.play-btn span{
+    padding: 15px 5px;
+    font-size: 1rem;
     cursor: pointer;
 }
 
@@ -190,7 +183,7 @@ ul{
 
 .about-services ul{
     display: inline-flex;
-    margin: 30px auto;
+/*    margin: 15px auto;*/
     text-align: center;
 }
 
@@ -200,20 +193,21 @@ ul{
 }
 
 .about-services ul li img{
-    width: 220px;
+    width: 8rem;
     height: auto;
 }
 
 .about-services ul li h1{
-    font-size: 25px;
+    font-size: 1.5rem;
     margin-top: 20px;
+    font-weight: 700;
 }
 
 .about-services ul li p{
-    font-size: 25px;
+    font-size: 1.2rem;
     margin-top: 20px;
     color: darkslategray;
-    font-weight: 700;
+    font-weight: 550;
 }
 
 .social-icons{
@@ -238,186 +232,3 @@ ul{
     background-color: #220efb;
     color: #fff;
 }
-
-=======
-    font-family: sans-serif;
-}
-body{
-    background: #fbf3ff;
-}
-/*.container{
-    position: absolute;
-    max-width: 800px;
-    max-height: 500px;
-    margin: auto;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-}
-.myRightCtn{
-    position: relative;
-    background-image: linear-gradient(45deg, #f046ff, #9b00e8);
-    border-radius: 25px;
-    height: 100%;
-    padding: 25px;
-    color: rgb(192, 192, 192);
-    font-size: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.myLeftCtn{
-    position: relative;
-    background: #fff;
-    border-radius: 25px;
-    height: 100%;
-    padding: 25px;
-    padding-left: 50px; 
-    text-align: center;  
-}
-.myLeftCtn header{
-    color: blueviolet;
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-.row{
-    height: 100%;
-}
-.myCard{
-    position: relative;
-    background: #fff;
-    height: 100%;
-    border-radius: 25px;
-    -webkit-box-shadow: 0px 10px 40px -10px rgba(0,0,0,0.7);
-    -moz-box-shadow: 0px 10px 40px -10px rgba(0,0,0, 0.7);
-    box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.7);
-}
-.myRightCtn header{
-    color: #fff;
-    font-size: 44px;
-}
-.box{
-    position: relative;
-    margin: 20px;
-    margin-bottom: 100px;
-}
-.myLeftCtn .myInput{
-    width: 230px;
-    border-radius: 25px;
-    padding: 10px;
-    padding-left: 50px;
-    border: none;
-    -webkit-box-shadow: 0px 10px 49px -14px rgba(0,0,0,0.7);
-    -moz-box-shadow: 0px 10px 49px -14px rgba(0,0,0, 0.7);
-    box-shadow: 0px 10px 49px -14px rgba(0, 0, 0, 0.7);
-}
-.myLeftCtn .myInput:focus{
-    outline: none;
-}
-.myForm{
-    position: relative;
-    margin-top: 50px;
-}
-.myLeftCtn .butt{
-    background: linear-gradient(45deg, #bb36fd, #9b00e8);
-    color: #fff;
-    width: 230px;
-    border: none;
-    border-radius: 25px;
-    padding: 10px;
-    -webkit-box-shadow: 0px 10px 41px -11px rgba(0,0,0,0.7);
-    -moz-box-shadow: 0px 10px 41px -11px rgba(0,0,0, 0.7);
-    box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
-}
-.myLeftCtn .butt:hover{
-    background: linear-gradient(45deg, #c85bff, #b726ff);
-}
-.myLeftCtn .butt:focus{
-    outline: none;
-}
-.myLeftCtn .fas{
-    position: relative;
-    color: darkviolet;
-    left: 36px;
-}
-.butt_out{
-    background: transparent;
-    color: #fff;
-    width: 120px;
-    border-radius: 25px;
-    border: 2px solid#fff0;
-    padding: 10px;
-    -webkit-box-shadow: 0px 10px 41px -11px rgba(0,0,0,0.7);
-    -moz-box-shadow: 0px 10px 41px -11px rgba(0,0,0, 0.7);
-    box-shadow: 0px 10px 41px -11px rgba(0, 0, 0, 0.7);
-}
-.butt_out:hover{
-    border: 2px solid#eecbff;
-}
-.butt_out:focus{
-    outline: none;
-}*/
-td {
-  white-space: normal !important; 
-  word-wrap: break-word;  
-}
-table {
-  table-layout: fixed;
-}
-
-/*new css*/
-
-.ocontainer{
-    background: rgba(255, 255, 255, 0.15);
-    margin: 0px 50px;
-    border-radius: 25px;
-}
-
-.ocard{
-    background: transparent;
-}
-.orow{
-    background: transparent;
-    display: flex;
-}
-.col-md-6{
-    background: transparent;
-}
-.right{
-    /*background: transparent;*/
-    position: relative;
-    background: rgba(255, 255, 255, 0.10);
-    /*height: 335px;*/
-    padding: 50px;
-}
-.left{
-    padding: 50px;
-    border-radius: 25px;
-}
-.container{
-    position: relative;
-    top: 50px;
-    bottom: 0px;
-    height: 40%;
-    width: 40%;
-}
-header{
-    text-align: center;
-    color: black;
-    font-size: 24px;
-    font-weight: 700;
-}
-p{
-    color: black;
-    text-align: center;
-}
-.form-control{
-    background-color: red;
-}
-.container{
-    background-color: #232733;
-}
->>>>>>> 5576062fa92e7b89c6624b05da2fa67c5abbd126

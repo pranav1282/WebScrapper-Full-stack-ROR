@@ -65,6 +65,6 @@ class PriceAlertsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def price_alert_params
-      params.require(:price_alert).permit(:url, :selector, :trigger_amount)
+      params.require(:price_alert).permit(:url, :selector, :trigger_amount, :title, :descriptionselector, :image)
     end
 end

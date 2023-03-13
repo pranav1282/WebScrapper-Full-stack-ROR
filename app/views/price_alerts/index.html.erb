@@ -1,9 +1,47 @@
-<p style="color: green"><%= notice %></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Alerts</title>
+    <%= stylesheet_link_tag "priceAlerts", "data-turbo-track": "reload" %>      
 
-<div id="price_alerts">
-  <% @price_alerts.each do |price_alert| %>
-    <%= render price_alert %>
-  <% end %>
-</div>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<%= link_to "New price alert", new_price_alert_path %>
+</head>
+<body>
+
+
+  <p style="color: green"><%= notice %></p>
+
+  <div class="container">
+    <div class="price_alerts">
+      <% @price_alerts.each do |price_alert| %>
+        <%= render price_alert %>
+      <% end %>
+
+
+      <div class="container d-flex justify-content-center mt-50 mb-50">  
+        <button type="button" class="btn btn-success mt-4 text-white"><i class="fa-sharp fa-solid fa-plus"></i> <%= link_to "New price alert", new_price_alert_path, style: "color: white" %></button>
+      </div>
+
+      
+    </div>
+
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

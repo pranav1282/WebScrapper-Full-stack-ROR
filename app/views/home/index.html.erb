@@ -1,4 +1,3 @@
-<<<<<<< HEAD
  <div class="banner">
      <div class="app-text">
          <h3>Just in few clicks</h3>
@@ -13,16 +12,23 @@
                      <div class="play-btn-inner">
                          <i class="fa fa-play"></i>
                      </div>
-                     <span>Start web scrapping</span>
+                     <span>
+                        <%= link_to "Start web scrapping", new_price_alert_path, style: "color:black" %>    
+                    </span>
                  </div>
             <%else%>
-                <div class="signup-btn">Sign up now</div> 
+                <div class="signup-btn">
+                    <%= link_to "Signup", new_user_registration_path, style: "color: black"%>
+                </div> 
 
                 <div class="play-btn">
                     <div class="play-btn-inner">
                        <i class="fa fa-play"></i>
                      </div>
-                    <span>Start web scrapping</span>
+
+                    <span>
+                        <%= link_to "Start web scrapping", new_price_alert_path, style: "color:black" %>    
+                    </span>
                 </div>
             <% end %>
          </div>
@@ -54,33 +60,10 @@
 
  <div class="social-icons">
      <ul>
-        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
      </ul>
  </div>
 </div>
-=======
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Web Scrapper</title>
-	<%= stylesheet_link_tag "home.css" %>
-</head>
-<body>
-	<div>
-		<div class="ocontent">
-			<h1>Web Scrapper</h1>
-			<p>Making web data extraction<br> easy and accessible for everyone </p>
-			<div>
-				<button type="button"> <span></span> Watch more</button>
-				<button type="button"> <span></span> Subscribe</button>
-			</div>
-		</div>
-	</div>
-</body>
-</html>
->>>>>>> 5576062fa92e7b89c6624b05da2fa67c5abbd126
